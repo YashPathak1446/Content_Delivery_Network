@@ -1,0 +1,29 @@
+p5-text.txt:
+Hello!!!
+Bye...
+
+p5-binary.bin:
+74657374
+
+isCached("blah"): 0
+isCached("p5-text.txt"): 1
+
+getFreshness("p5-text.txt"): 2
+getFreshness("p5-text.txt"): 1
+
+Marking 'p5-text.txt' as fresh...
+getFreshness("p5-text.txt"): 3
+
+Purging cache...
+isCached("p5-text.txt"): 0
+
+Top file: p5-text.txt
+
+Cache Stats
+----------
+Total requests: 3
+Total files requested: 2
+Average requests per file: 1.50
+Top file: p5-text.txt (2 requests)
+Total times read from disk: 2
+----------
